@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AspNetMySQL.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AspNetMySQL.Controllers
@@ -14,7 +15,10 @@ namespace AspNetMySQL.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "value1", "value2" };
+              quizContext _context = new quizContext();
+
+            return _context.Questions.Select(i => i.Qns).ToList();
+            //return new string[] { "value1", "value2" };
         }
 
         // GET api/values/5

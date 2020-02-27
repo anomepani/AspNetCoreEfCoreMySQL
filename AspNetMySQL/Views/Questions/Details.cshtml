@@ -1,0 +1,48 @@
+﻿@model AspNetMySQL.Models.Questions
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Questions</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Eid)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Eid)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Qid)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Qid)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Qns)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Qns)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Choice)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Choice)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sn)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Sn)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

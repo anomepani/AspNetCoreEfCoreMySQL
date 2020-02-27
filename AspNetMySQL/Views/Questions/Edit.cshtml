@@ -1,0 +1,54 @@
+﻿@model AspNetMySQL.Models.Questions
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Questions</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Eid" class="control-label"></label>
+                <input asp-for="Eid" class="form-control" />
+                <span asp-validation-for="Eid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Qid" class="control-label"></label>
+                <input asp-for="Qid" class="form-control" />
+                <span asp-validation-for="Qid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Qns" class="control-label"></label>
+                <input asp-for="Qns" class="form-control" />
+                <span asp-validation-for="Qns" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Choice" class="control-label"></label>
+                <input asp-for="Choice" class="form-control" />
+                <span asp-validation-for="Choice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sn" class="control-label"></label>
+                <input asp-for="Sn" class="form-control" />
+                <span asp-validation-for="Sn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
